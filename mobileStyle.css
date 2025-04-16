@@ -1,0 +1,149 @@
+h1{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 3em;
+}
+
+h3{
+  text-align: left;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+p.about{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+    /* Sticky (Fixed) Menu */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  li {
+    float: left;
+    border-right: 1px solid #555;
+  }
+  
+  li a {
+    font-family:'Courier New', Courier, monospace;
+    display: block;
+    font-size: .79em;
+    color: white;
+    text-align: center;
+    padding: 14px 6px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  li.start a{
+    background-color: rgb(244, 67, 54);
+  }
+
+  li.start a:hover{
+    background-color: rgb(185, 31, 20);
+  }
+
+  * {
+    
+	  box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+  }
+
+  .column {
+      float: left;
+  }
+  
+  .left {
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+
+  }
+  
+  .right {
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .mid{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 10em;
+  }
+
+  footer {
+    position: bottom;
+    bottom: 0;
+    box-sizing: border-box;
+	  margin: 0;
+	  padding: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: .75em;
+  }
+
+  body{
+    padding-top: 60px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #111;
+    text-align: left;
+    padding: 8px;
+  }
+
+  summary{
+    position: relative;
+    width: 100%;
+    border: 1px solid #111;
+    border-radius: 4px;
+    padding: 10px;
+    background: #b4b3b3;
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+
+  details[open] summary::after {
+    content: "▲";
+  }
+
+  summary::after {
+    content: "▼";
+  }
