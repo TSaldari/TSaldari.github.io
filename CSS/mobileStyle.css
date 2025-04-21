@@ -147,3 +147,7 @@ ul {
   summary::after {
     content: "▼";
   }
+
+  .clear {
+    clear: both;
+  }
