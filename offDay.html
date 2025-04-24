@@ -5,25 +5,63 @@
 	<title>Targeted Fitness</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen and (min-width:481px)" />
 	<link rel="stylesheet" type="text/css" href="CSS/mobileStyle.css" media="screen and (max-width:480px)" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="JavaScript/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 	<!--Page Content-->
     <nav>
 		<ul>
-			<li class="start"><a href="index.html">Targeted Fitness</a></li>
-			<li><a href="pushDay.html">Push Day</a></li>
-			<li><a href="pullDay.html">Pull Day</a></li>
-			<li><a href="legDay.html">Leg Day</a></li>
-			<li><a href="offDay.html">Off Day</a></li>		
+			<li class="start"><div class="dropdown">
+				<a href="index.html">Targeted Fitness</a>
+				<div class="dropdown-content">
+					<center><p>Dark Mode</p>
+						<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="changeColor()">
+							<span class="slider round"></span>
+						</label></center>
+				</div> </li>
+			
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pushDay.html">Push Day</a>
+				<div class="dropdown-content">
+					<a href="pushDay.html#chest" onclick="navigateToSection('#chest')">Chest</a>
+					<a href="pushDay.html#triceps" onclick="navigateToSection('#triceps')">Triceps</a>
+					<a href="pushDay.html#shoulders" onclick="navigateToSection('#shoulders')">Shoulders</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pullDay.html">Pull Day</a>
+				<div class="dropdown-content">
+					<a href="pullDay.html#upperBack" onclick="navigateToSection('#upperBack')">Upper Back</a>
+					<a href="pullDay.html#lats" onclick="navigateToSection('#lats')">Lats</a>
+					<a href="pullDay.html#biceps" onclick="navigateToSection('#biceps')">Biceps</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="legDay.html">Leg Day</a>
+				<div class="dropdown-content">
+					<a href="legDay.html#quads" onclick="navigateToSection('#quads')">Quads</a>
+					<a href="legDay.html#hamstrings" onclick="navigateToSection('#hamstrings')">Hamstrings</a>
+					<a href="legDay.html#glutes" onclick="navigateToSection('#glutes')">Glutes</a>
+					<a href="legDay.html#calves" onclick="navigateToSection('#calves')">Calves</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="offDay.html">Off Day</a>
+				<div class="dropdown-content">
+					<a href="offDay.html#abs" onclick="navigateToSection('#abs')">Abdominals</a>
+					<a href="offDay.html#cardio" onclick="navigateToSection('#cardio')">Cardio System</a>
+				</div>
+			</div></li>    
 		</ul>
 	</nav>
 
 	<br><center><h1>Off Day</h1></center><br>
 	<p class="about">Rest and recover, keep it light today!</p>
 
-    <details>
+    <details id="abs">
         <summary><h2 class="dropdown"><u>Abdominals</u></h2></summary>
         <p class="left column"><b><u>Description:</u></b> The abdominal muscles are a muscle group that is located on the front of the body on the abdomen. Its main function is to stabilize the trunk, and move the body between the ribcage and pelvis.            
             <br><br><b><u>Muscle parts:</u></b> The abdominals contains many muscles, these include the: Transversus abdominis, Rectus abdominis, External oblique muscles, and Internal oblique muscles.<br>
@@ -43,7 +81,7 @@
                     <th>Benefits</th>
                     <th>Video</th>
                 </tr>
-                <tr>
+                <tr class="easy">
                     <td>Beginner Workouts</td>
                     <td>Decline Sit Ups</td>
                     <td>Easy and effective, large range of motion, and can implement weights</td>
@@ -51,7 +89,7 @@
                         <iframe width="300" height="150" src="https://www.youtube.com/embed/N7hf1_vcX5w?si=qp0HXugLtlF8_xgn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
                     </td>
                 </tr>
-                <tr>
+                <tr class="mid">
                     <td>Intermediate Workouts</td>
                     <td>Weighted Russian Twists</td>
                     <td>Primarily target the obliques, develops deep core stabilizers, and is safe.</td>
@@ -59,7 +97,7 @@
                         <iframe width="300" height="150" src="https://www.youtube.com/embed/Yg47UxxV9Vc?si=l-rcPXVUMmbgKfIh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
                     </td>
                 </tr>
-                <tr>
+                <tr class="hard">
                     <td>Advanced Workouts</td>
                     <td>Roman Chair Knee Raise</td>
                     <td>Targets all abdominal muscles, very versatile, and can implement weights.</td>
@@ -71,7 +109,7 @@
         </div>
     </details>
 
-    <details>
+    <details id="cardio">
         <summary><h2 class="dropdown"><u>Cardiovascular System</u></h2></summary>
       
         <p class="left column">
@@ -95,7 +133,7 @@
             <th>Benefits</th>
             <th>Video</th>
           </tr>
-          <tr>
+          <tr class="easy">
             <td>Beginner Workouts</td>
             <td>Elliptical</td>
             <td>A form of cardio which is easier on the knee joints. Also effective in calorie burning.</td>
@@ -103,7 +141,7 @@
                 <iframe width="300" height="150" src="https://www.youtube.com/embed/RakIFxUmSpA?si=WeApPRNxfcEfEHH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
             </td>
           </tr>
-          <tr>
+          <tr class="mid">
             <td>Intermediate Workouts</td>
             <td>Stationary Biking</td>
             <td>A form of cardio which is designed for caloric burn and lowerbody endurance.</td>
@@ -111,7 +149,7 @@
                 <iframe width="300" height="150" src="https://www.youtube.com/embed/NwwDBARCGgo?si=g32RCNJjaeqHBF7X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
             </td>
           </tr>
-          <tr>
+          <tr class="hard">
             <td>Advanced Workouts</td>
             <td>Stairmaster</td>
             <td>An advanced form of cardio which is designed to maximize caloric burn.</td>

@@ -5,18 +5,56 @@
 	<title>Targeted Fitness</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen and (min-width:481px)" />
 	<link rel="stylesheet" type="text/css" href="CSS/mobileStyle.css" media="screen and (max-width:480px)" />
+	<script src="JavaScript/script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 	<!--Page Content-->
-    <nav>
+	<nav>
 		<ul>
-			<li class="start"><a href="index.html">Targeted Fitness</a></li>
-			<li><a href="pushDay.html">Push Day</a></li>
-			<li><a href="pullDay.html">Pull Day</a></li>
-			<li><a href="legDay.html">Leg Day</a></li>
-			<li><a href="offDay.html">Off Day</a></li>		
+			<li class="start"><div class="dropdown">
+				<a href="index.html">Targeted Fitness</a>
+				<div class="dropdown-content">
+					<center><p>Dark Mode</p>
+						<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="changeColor()">
+							<span class="slider round"></span>
+						</label></center>
+				</div> </li>
+			
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pushDay.html">Push Day</a>
+				<div class="dropdown-content">
+					<a href="pushDay.html#chest" onclick="navigateToSection('#chest')">Chest</a>
+					<a href="pushDay.html#triceps" onclick="navigateToSection('#triceps')">Triceps</a>
+					<a href="pushDay.html#shoulders" onclick="navigateToSection('#shoulders')">Shoulders</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pullDay.html">Pull Day</a>
+				<div class="dropdown-content">
+					<a href="pullDay.html#upperBack" onclick="navigateToSection('#upperBack')">Upper Back</a>
+					<a href="pullDay.html#lats" onclick="navigateToSection('#lats')">Lats</a>
+					<a href="pullDay.html#biceps" onclick="navigateToSection('#biceps')">Biceps</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="legDay.html">Leg Day</a>
+				<div class="dropdown-content">
+					<a href="legDay.html#quads" onclick="navigateToSection('#quads')">Quads</a>
+					<a href="legDay.html#hamstrings" onclick="navigateToSection('#hamstrings')">Hamstrings</a>
+					<a href="legDay.html#glutes" onclick="navigateToSection('#glutes')">Glutes</a>
+					<a href="legDay.html#calves" onclick="navigateToSection('#calves')">Calves</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="offDay.html">Off Day</a>
+				<div class="dropdown-content">
+					<a href="offDay.html#abs" onclick="navigateToSection('#abs')">Abdominals</a>
+					<a href="offDay.html#cardio" onclick="navigateToSection('#cardio')">Cardio System</a>
+				</div>
+			</div></li>    
 		</ul>
 	</nav>
 

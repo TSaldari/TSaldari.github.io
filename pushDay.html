@@ -5,25 +5,63 @@
 	<title>Targeted Fitness</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen and (min-width:481px)" />
 	<link rel="stylesheet" type="text/css" href="CSS/mobileStyle.css" media="screen and (max-width:480px)" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="JavaScript/script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 	<!--Page Content-->
-    <nav>
+  <nav>
 		<ul>
-			<li class="start"><a href="index.html">Targeted Fitness</a></li>
-			<li><a href="pushDay.html">Push Day</a></li>
-			<li><a href="pullDay.html">Pull Day</a></li>
-			<li><a href="legDay.html">Leg Day</a></li>
-			<li><a href="offDay.html">Off Day</a></li>		
+			<li class="start"><div class="dropdown">
+				<a href="index.html">Targeted Fitness</a>
+				<div class="dropdown-content">
+					<center><p>Dark Mode</p>
+						<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="changeColor()">
+							<span class="slider round"></span>
+						</label></center>
+				</div> </li>
+			
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pushDay.html">Push Day</a>
+				<div class="dropdown-content">
+					<a href="pushDay.html#chest" onclick="navigateToSection('#chest')">Chest</a>
+					<a href="pushDay.html#triceps" onclick="navigateToSection('#triceps')">Triceps</a>
+					<a href="pushDay.html#shoulders" onclick="navigateToSection('#shoulders')">Shoulders</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pullDay.html">Pull Day</a>
+				<div class="dropdown-content">
+					<a href="pullDay.html#upperBack" onclick="navigateToSection('#upperBack')">Upper Back</a>
+					<a href="pullDay.html#lats" onclick="navigateToSection('#lats')">Lats</a>
+					<a href="pullDay.html#biceps" onclick="navigateToSection('#biceps')">Biceps</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="legDay.html">Leg Day</a>
+				<div class="dropdown-content">
+					<a href="legDay.html#quads" onclick="navigateToSection('#quads')">Quads</a>
+					<a href="legDay.html#hamstrings" onclick="navigateToSection('#hamstrings')">Hamstrings</a>
+					<a href="legDay.html#glutes" onclick="navigateToSection('#glutes')">Glutes</a>
+					<a href="legDay.html#calves" onclick="navigateToSection('#calves')">Calves</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="offDay.html">Off Day</a>
+				<div class="dropdown-content">
+					<a href="offDay.html#abs" onclick="navigateToSection('#abs')">Abdominals</a>
+					<a href="offDay.html#cardio" onclick="navigateToSection('#cardio')">Cardio System</a>
+				</div>
+			</div></li>    
 		</ul>
 	</nav>
 
 	<br><center><h1>Push Day</h1></center><br>
 	<p class="about">Everyones favorite day, Chest Day!</p>
 
-    <details>
+    <details id="chest">
         <summary><h2 class="dropdown"><u>Chest</u></h2></summary>
         <p class="left column"><b><u>Description:</u></b> The Pectoralis Major (chest) muscle is a large muscle that covers most of the upper chest. Its main functionality is moving the arm across the body. 
             <br><br><b><u>Muscle parts:</u></b> The Chest has three muscle heads, these include the: Clavicular head (Upper);  Sternal head (Middle); Abdominal head (Lower).<br>
@@ -42,21 +80,21 @@
                 <th>Benefits</th>
                 <th>Video</th>
             </tr>
-            <tr>
+            <tr class="easy">
                 <td>Beginner Workouts</td>
                 <td>Bench Press</td>
                 <td>Everyone's favorite! Strengthens chest, shoulders, and triceps</td>
                 <td>
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/tuwHzzPdaGc?si=e1rZ9qTb4jN0fAdH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </td>
             </tr>
-            <tr>
+            <tr class="mid">
                 <td>Intermediate Workouts</td>
                 <td>Standing Cable Fly</td>
                 <td>Great chest isolation with reduced joint strain and constaint tension on the muscle. Modifications to the angle of this exercise will hit different parts of the chest!</td>
                 <td>
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/OPYrUGZL8nU?si=3GEM-rSgMmWmG3Yx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </td>
             </tr>
-            <tr>
+            <tr class="hard">
                 <td>Advanced Workouts</td>
                 <td>Smith Machine Incline Press</td>
                 <td>Hits the upper chest primarily, in addition to the rest of the chest, triceps, and shoulders. This exercise is also safer and reduced shoulder join pain.</td>
@@ -66,7 +104,7 @@
         </table>
     </details>
 
-    <details>
+    <details id="triceps">
         <summary><h2 class="dropdown"><u>Triceps</u></h2></summary>
       
         <p class="left column">
@@ -91,7 +129,7 @@
             <th>Benefits</th>
             <th>Video</th>
           </tr>
-          <tr>
+          <tr class="easy">
             <td>Beginner Workouts</td>
             <td>Rope Tricep Extensions</td>
             <td>Easy, effective, and hits the Medial and Lateral heads</td>
@@ -99,7 +137,7 @@
               <iframe width="300" height="150" src="https://www.youtube.com/embed/LzwgB15UdO8?si=9OO8uDOu0iNjvfsz" frameborder="0" allowfullscreen></iframe>
             </td>
           </tr>
-          <tr>
+          <tr class="mid">
             <td>Intermediate Workouts</td>
             <td>Overhead Tricep Extension</td>
             <td>Strengthens the Long head primarily, but also hits the Medial and Lateral head. Additionally, it helps strengthen shoulder stability.</td>
@@ -107,7 +145,7 @@
               <iframe width="300" height="150" src="https://www.youtube.com/embed/NRENeEgaIgA?si=7W4-Ux98I0DwPUzv" frameborder="0" allowfullscreen></iframe>
             </td>
           </tr>
-          <tr>
+          <tr class="hard">
             <td>Advanced Workouts</td>
             <td>Weighted Dips</td>
             <td>Strengthens the Long head primarily, but also hits the Medial and Lateral head. Additionally, it helps develop the lower chest.</td>
@@ -119,7 +157,7 @@
       </details>
       
 
-    <details>
+    <details id="shoulders">
         <summary><h2 class="dropdown"><u>Shoulders</u></h2></summary>
         
         <p class="left column">
@@ -145,21 +183,21 @@
                 <th>Benefits</th>
                 <th>Video</th>
             </tr>
-            <tr>
+            <tr class="easy">
                 <td>Beginner Workouts</td>
                 <td>Seated Dumbbell Press</td>
                 <td>Targets the Front and Side delts primarily, safe movement, easy, and very popular</td>
                 <td>
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/FRxZ6wr5bpA?si=8bU_2h8tpdx-Uvg1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </td>
             </tr>
-            <tr>
+            <tr class="mid">
                 <td>Intermediate Workouts</td>
                 <td>Dumbbell Lateral Raise</td>
                 <td>Great for pure isolation of the deloid muscle, modifications of the raise angle can target different heads more effectively.</td>
                 <td>
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/XPPfnSEATJA?si=hqU6duudd8Gxg94A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                </td>
             </tr>
-            <tr>
+            <tr class="hard">
                 <td>Advanced Workouts</td>
                 <td>Barbell Overhead Press</td>
                 <td>An upperbody compound movement which hits the shoudlers primarily, this exercise also builds core strength and stability within the deltiod muscles.</td>

@@ -5,25 +5,63 @@
 	<title>Targeted Fitness</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen and (min-width:481px)" />
 	<link rel="stylesheet" type="text/css" href="CSS/mobileStyle.css" media="screen and (max-width:480px)" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="JavaScript/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 	<!--Page Content-->
     <nav>
 		<ul>
-			<li class="start"><a href="index.html">Targeted Fitness</a></li>
-			<li><a href="pushDay.html">Push Day</a></li>
-			<li><a href="pullDay.html">Pull Day</a></li>
-			<li><a href="legDay.html">Leg Day</a></li>
-			<li><a href="offDay.html">Off Day</a></li>		
+			<li class="start"><div class="dropdown">
+				<a href="index.html">Targeted Fitness</a>
+				<div class="dropdown-content">
+					<center><p>Dark Mode</p>
+						<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="changeColor()">
+							<span class="slider round"></span>
+						</label></center>
+				</div> </li>
+			
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pushDay.html">Push Day</a>
+				<div class="dropdown-content">
+					<a href="pushDay.html#chest" onclick="navigateToSection('#chest')">Chest</a>
+					<a href="pushDay.html#triceps" onclick="navigateToSection('#triceps')">Triceps</a>
+					<a href="pushDay.html#shoulders" onclick="navigateToSection('#shoulders')">Shoulders</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pullDay.html">Pull Day</a>
+				<div class="dropdown-content">
+					<a href="pullDay.html#upperBack" onclick="navigateToSection('#upperBack')">Upper Back</a>
+					<a href="pullDay.html#lats" onclick="navigateToSection('#lats')">Lats</a>
+					<a href="pullDay.html#biceps" onclick="navigateToSection('#biceps')">Biceps</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="legDay.html">Leg Day</a>
+				<div class="dropdown-content">
+					<a href="legDay.html#quads" onclick="navigateToSection('#quads')">Quads</a>
+					<a href="legDay.html#hamstrings" onclick="navigateToSection('#hamstrings')">Hamstrings</a>
+					<a href="legDay.html#glutes" onclick="navigateToSection('#glutes')">Glutes</a>
+					<a href="legDay.html#calves" onclick="navigateToSection('#calves')">Calves</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="offDay.html">Off Day</a>
+				<div class="dropdown-content">
+					<a href="offDay.html#abs" onclick="navigateToSection('#abs')">Abdominals</a>
+					<a href="offDay.html#cardio" onclick="navigateToSection('#cardio')">Cardio System</a>
+				</div>
+			</div></li>    
 		</ul>
 	</nav>
 
 	<br><center><h1>Pull Day</h1></center><br>
 	<p class="about">Lets grow those lats and biceps!</p>
 
-    <details>
+    <details id="upperBack">
         <summary><h2 class="dropdown"><u>Upper Back</u></h2></summary>
         <p class="left column"><b><u>Description:</u></b> Back muscles are large and complex, which leads to there being three muscle types; superficial, intermediate, and deep. <br>
             In bodybuilding, the emphasis is on the superficial back muscles, as they are the most visible and contribute most to aesthetics. These muscles primarily function to control and move the scapula during upper body movements.            
@@ -44,7 +82,7 @@
                         <th>Benefits</th>
                         <th>Video</th>
                     </tr>
-                    <tr>
+                    <tr class="easy">
                         <td>Beginner Workouts</td>
                         <td>One-Arm Machine Row</td>
                         <td>Easy and effective upper back workout, large range of motion, and safe. </td>
@@ -52,7 +90,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/z11jNvj5hH0?si=mRPUo8xb7QFP5VWT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="mid">
                         <td>Intermediate Workouts</td>
                         <td>Machine T-Bar Row</td>
                         <td>Upper back muscle isolation, safe, large range of motion, and less lowerback and bicep strain.</td>
@@ -60,7 +98,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/kHW23afzaUs?si=7a1eXwLozlDxqgDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="hard">
                         <td>Advanced Workouts</td>
                         <td>Bent Over Row</td>
                         <td>A popular compound movement which hits every back muscle.</td>
@@ -72,7 +110,7 @@
         </div>
     </details>
 
-    <details>
+    <details id="lats">
         <summary><h2 class="dropdown"><u>Lats</u></h2></summary>
       
         <p class="left column">
@@ -95,7 +133,7 @@
             <th>Benefits</th>
             <th>Video</th>
           </tr>
-          <tr>
+          <tr class="easy">
             <td>Beginner Workouts</td>
             <td>Supinated Pull Down</td>
             <td>Easy, effective, safe, and can be done with one or both arms.</td>
@@ -103,7 +141,7 @@
                 <iframe width="300" height="150" src="https://www.youtube.com/embed/QEKN-qT3oX8?si=pb3rFz-vWuLS4PNR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </td>
           </tr>
-          <tr>
+          <tr class="mid">
             <td>Intermediate Workouts</td>
             <td>Lat Pull Down</td>
             <td>Very popular, Improved range of motion, builds muscle stability.</td>
@@ -111,7 +149,7 @@
                 <iframe width="300" height="150" src="https://www.youtube.com/embed/iKrKgWR9wbY?si=6AnV9xXjwIXAKLlW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </td>
           </tr>
-          <tr>
+          <tr class="hard">
             <td>Advanced Workouts</td>
             <td>Weighted Pull Ups</td>
             <td>No machine needed, builds functional strength and body control.</td>
@@ -123,7 +161,7 @@
       </details>
       
 
-    <details>
+    <details id="biceps">
         <summary><h2 class="dropdown"><u>Biceps</u></h2></summary>
         
         <p class="left column">
@@ -149,7 +187,7 @@
                 <th>Benefits</th>
                 <th>Video</th>
             </tr>
-            <tr>
+            <tr class="easy">
                 <td>Beginner Workouts</td>
                 <td>Standing Barbell Curl</td>
                 <td>Easy, effective, safe, and hand placement can change targeted muscle heads.</td>
@@ -157,7 +195,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/5bo_0i90T9Y?si=b2yGz688C5GJKYXB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </td>
             </tr>
-            <tr>
+            <tr class="mid">
                 <td>Intermediate Workouts</td>
                 <td>Preacher Hammer Curls</td>
                 <td>Targets the brachialis (a muscle under the biceps) which makes the biceps appear larger. Great isolation exercise.</td>
@@ -165,7 +203,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/ZdcFOgFi1Dg?si=e1YWtri9BhRL_wTu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </td>
             </tr>
-            <tr>
+            <tr class="hard">
                 <td>Advanced Workouts</td>
                 <td>Spider Curls</td>
                 <td>Great isolation, large range of motion, and constant tension throughout the movement.</td>

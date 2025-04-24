@@ -5,25 +5,63 @@
 	<title>Targeted Fitness</title>
 	<link rel="stylesheet" type="text/css" href="CSS/style.css" media="screen and (min-width:481px)" />
 	<link rel="stylesheet" type="text/css" href="CSS/mobileStyle.css" media="screen and (max-width:480px)" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="JavaScript/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 <body>
 	<!--Page Content-->
     <nav>
 		<ul>
-			<li class="start"><a href="index.html">Targeted Fitness</a></li>
-			<li><a href="pushDay.html">Push Day</a></li>
-			<li><a href="pullDay.html">Pull Day</a></li>
-			<li><a href="legDay.html">Leg Day</a></li>
-			<li><a href="offDay.html">Off Day</a></li>		
+			<li class="start"><div class="dropdown">
+				<a href="index.html">Targeted Fitness</a>
+				<div class="dropdown-content">
+					<center><p>Dark Mode</p>
+						<label class="switch">
+							<input type="checkbox" id="themeToggle" onclick="changeColor()">
+							<span class="slider round"></span>
+						</label></center>
+				</div> </li>
+			
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pushDay.html">Push Day</a>
+				<div class="dropdown-content">
+					<a href="pushDay.html#chest" onclick="navigateToSection('#chest')">Chest</a>
+					<a href="pushDay.html#triceps" onclick="navigateToSection('#triceps')">Triceps</a>
+					<a href="pushDay.html#shoulders" onclick="navigateToSection('#shoulders')">Shoulders</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="pullDay.html">Pull Day</a>
+				<div class="dropdown-content">
+					<a href="pullDay.html#upperBack" onclick="navigateToSection('#upperBack')">Upper Back</a>
+					<a href="pullDay.html#lats" onclick="navigateToSection('#lats')">Lats</a>
+					<a href="pullDay.html#biceps" onclick="navigateToSection('#biceps')">Biceps</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="legDay.html">Leg Day</a>
+				<div class="dropdown-content">
+					<a href="legDay.html#quads" onclick="navigateToSection('#quads')">Quads</a>
+					<a href="legDay.html#hamstrings" onclick="navigateToSection('#hamstrings')">Hamstrings</a>
+					<a href="legDay.html#glutes" onclick="navigateToSection('#glutes')">Glutes</a>
+					<a href="legDay.html#calves" onclick="navigateToSection('#calves')">Calves</a>
+				</div>
+			</div></li>
+			<li><div class="dropdown">
+				<a class="dropbtn" href="offDay.html">Off Day</a>
+				<div class="dropdown-content">
+					<a href="offDay.html#abs" onclick="navigateToSection('#abs')">Abdominals</a>
+					<a href="offDay.html#cardio" onclick="navigateToSection('#cardio')">Cardio System</a>
+				</div>
+			</div></li>    
 		</ul>
 	</nav>
 
 	<br><center><h1>Leg Day</h1></center><br>
 	<p class="about">Time to build that foundation!</p>
 
-    <details>
+    <details id="quads">
         <summary><h2 class="dropdown"><u>Quads</u></h2></summary>
         <p class="left column"><b><u>Description:</u></b> The quadricep femoris (quads) muscle is one of the largest muscle in the human body. It is located on the front of the leg above the knee. Its main functionality is to extend the knee. 
             <br><br><b><u>Muscle parts:</u></b> The quads have four sub muscles, these include the: Rectus frmoris (Blue), Vastus lateralis (Yellow), Vastus medialis (Green), and the Vastus intermedius (Under the Recuts femoris).<br>
@@ -43,7 +81,7 @@
                         <th>Benefits</th>
                         <th>Video</th>
                     </tr>
-                    <tr>
+                    <tr class="easy">
                         <td>Beginner Workouts</td>
                         <td>Seated Leg Extension</td>
                         <td>Easy, extremely effective, great isolation, and safe.</td>
@@ -51,7 +89,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/0fl1RRgJ83I?si=OSqYpallrQGG9Vdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="mid">
                         <td>Intermediate Workouts</td>
                         <td>Barbell Back Squat</td>
                         <td>Extremely popular, one of the big 3 compound lifts, whole lower body movement with a focus on the quads.</td>
@@ -59,7 +97,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/R2dMsNhN3DE?si=_cEUNgDMutuyt9_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="hard">
                         <td>Advanced Workouts</td>
                         <td>Bulgarian Split Squat</td>
                         <td>Separate quad development, great isolation, great range of motion.</td>
@@ -70,7 +108,7 @@
         </div>
     </details>
 
-    <details>
+    <details id="hamstrings">
         <summary><h2 class="dropdown"><u>Hamstrings</u></h2></summary>
         <p class="left column"><b><u>Description:</u></b> The hamstrings muscle is a large msucle located on the back of the leg above the knee. Its main functionality is to flex the knee. 
             <br><br><b><u>Muscle parts:</u></b> The hamstrings have three sub muscles, these include the: Semimembranosus (Blue), Biceps femoris (Yellow), and Semitendinosus (Green).<br>
@@ -90,7 +128,7 @@
                         <th>Benefits</th>
                         <th>Video</th>
                     </tr>
-                    <tr>
+                    <tr class="easy">
                         <td>Beginner Workouts</td>
                         <td>Seated Leg Curl</td>
                         <td>Easy, extremely effective, great isolation, and safe.</td>
@@ -98,7 +136,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/3BWiLFc8Dbg?si=JzoEnN0CpoULnEPK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="mid">
                         <td>Intermediate Workouts</td>
                         <td>Romanian Deadlift (RDL)</td>
                         <td>Effective, improves hip hinge mechanics, compound movement targeting the hamstrings.</td>
@@ -106,7 +144,7 @@
                             <iframe width="300" height="150" src="https://www.youtube.com/embed/-m45n1_x32E?si=Za3xcNvpAWBElTaV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="hard">
                         <td>Advanced Workouts</td>
                         <td>Nordic Hamstring Curl</td>
                         <td>Increases knee stability, reduces injury risk, and increases explosiveness.</td>
@@ -118,7 +156,7 @@
         </div>
     </details>
 
-    <details>
+    <details id="glutes">
         <summary><h2 class="dropdown"><u>Glutes</u></h2></summary>
         
         <p class="left column">
@@ -145,7 +183,7 @@
                 <th>Benefits</th>
                 <th>Video</th>
             </tr>
-            <tr>
+            <tr class="easy">
                 <td>Beginner Workouts</td>
                 <td>Standing Glute Kickback</td>
                 <td>Easy and safe movement.</td>
@@ -153,7 +191,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/24pvhNOoK80?si=8sJOdUwlqBJpULbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
                 </td>
             </tr>
-            <tr>
+            <tr class="mid">
                 <td>Intermediate Workouts</td>
                 <td>Barbell Hip Thrust</td>
                 <td>Effective, accessible with heavy loads, and helps pelvic stability.</td>
@@ -161,7 +199,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/lAnqN0J_p5A?si=n3Vxgqi5sQSl7FTz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
                 </td>
             </tr>
-            <tr>
+            <tr class="hard">
                 <td>Advanced Workouts</td>
                 <td>Standing Barbell Goodmorning</td>
                 <td>Improves hip mobility, reduces risk of injury, and strengthens the glutes, lower back, and hamstrings.</td>
@@ -172,7 +210,7 @@
         </table>
     </details>
 
-    <details>
+    <details id="calves">
         <summary><h2 class="dropdown"><u>Calves</u></h2></summary>
         
         <p class="left column">
@@ -198,7 +236,7 @@
                 <th>Benefits</th>
                 <th>Video</th>
             </tr>
-            <tr>
+            <tr class="easy">
                 <td>Beginner Workouts</td>
                 <td>Seated Calf Raise</td>
                 <td>Easy, effective, large range of motion, good isolation, safe, and targets soleus primarily.</td>
@@ -206,7 +244,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/Yh5TXz99xwY?si=M2r1bFpxrWbJvQEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
                 </td>
             </tr>
-            <tr>
+            <tr class="mid">
                 <td>Intermediate Workouts</td>
                 <td>Standing Machine Calf Raise</td>
                 <td>Easy, effective, large range of motion, good isolation, and targets gastrocnemius primarily.</td>
@@ -214,7 +252,7 @@
                     <iframe width="300" height="150" src="https://www.youtube.com/embed/RBslMmWqzzE?si=rgaQGQyxoHaX39ki" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
                 </td>
             </tr>
-            <tr>
+            <tr class="hard">
                 <td>Advanced Workouts</td>
                 <td>Barbell Overhead Press</td>
                 <td>Targets both the soleus and gastrocnemius, easy, can be used in a superset with leg press (Another great quad/hamstring compound movement).</td>
